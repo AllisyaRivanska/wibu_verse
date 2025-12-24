@@ -4,9 +4,20 @@ import 'package:wibu_verse/bloc/top_anime_bloc.dart';
 import 'package:wibu_verse/bloc/top_anime_state.dart';
 import 'package:wibu_verse/presentation/top_anime_detail_page.dart';
 
-class TopAnimePage extends StatelessWidget {
+class TopAnimePage extends StatefulWidget {
   const TopAnimePage({super.key});
 
+  @override
+  State<TopAnimePage> createState() => _TopAnimePageState();
+}
+
+class _TopAnimePageState extends State<TopAnimePage> {
+  @override 
+  void initState() {
+    super.initState();
+    context.read<TopAnimeBloc>().getTopAnime();
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

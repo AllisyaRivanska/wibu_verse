@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => TopAnimeBloc()..getTopAnime(),),
+        BlocProvider(create: (_) => TopAnimeBloc()),
       ],
     
     child: MaterialApp(
