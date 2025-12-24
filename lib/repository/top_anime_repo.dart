@@ -21,4 +21,3 @@ class TopAnimeRepository {
       }
   }
 }
-      // return right(TopAnimeModel.fromJson(response.data));
